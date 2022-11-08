@@ -4,9 +4,9 @@ package ru.skillfactory.Ex3;
 
 import ru.skillfactory.Ex3.comparator.StudentComparator;
 import ru.skillfactory.Ex3.comparator.UniversityComparator;
-import ru.skillfactory.Ex3.comparator.io.XlsReader;
-import ru.skillfactory.Ex3.comparator.model.Student;
-import ru.skillfactory.Ex3.comparator.model.University;
+import ru.skillfactory.Ex3.io.XlsReader;
+import ru.skillfactory.Ex3.model.Student;
+import ru.skillfactory.Ex3.model.University;
 import ru.skillfactory.Ex3.enums.StudentTypeComparatorEnum;
 import ru.skillfactory.Ex3.enums.UniversityTypeComparatorEnum;
 import ru.skillfactory.Ex3.utils.UtilComparator;

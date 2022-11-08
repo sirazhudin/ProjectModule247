@@ -1,4 +1,4 @@
-package ru.skillfactory.Ex3.comparator.model;
+package ru.skillfactory.Ex3.model;
 
 public class Student {
 

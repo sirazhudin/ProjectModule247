@@ -1,6 +1,6 @@
 package ru.skillfactory.Ex3.comparator;
 
-import ru.skillfactory.Ex3.comparator.model.University;
+import ru.skillfactory.Ex3.model.University;
 
 import java.util.Comparator;
 

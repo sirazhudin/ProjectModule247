@@ -1,10 +1,10 @@
-package ru.skillfactory.Ex3.comparator.io;
+package ru.skillfactory.Ex3.io;
 
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import ru.skillfactory.Ex3.comparator.model.Student;
-import ru.skillfactory.Ex3.comparator.model.University;
+import ru.skillfactory.Ex3.model.Student;
+import ru.skillfactory.Ex3.model.University;
 import ru.skillfactory.Ex3.enums.StudyProfile;
 
 import java.io.FileInputStream;

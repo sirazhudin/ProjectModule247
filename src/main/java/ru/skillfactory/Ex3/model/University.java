@@ -1,4 +1,4 @@
-package ru.skillfactory.Ex3.comparator.model;
+package ru.skillfactory.Ex3.model;
 
 import ru.skillfactory.Ex3.enums.StudyProfile;
 

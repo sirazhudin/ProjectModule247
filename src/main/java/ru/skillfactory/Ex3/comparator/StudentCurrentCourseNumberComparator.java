@@ -1,6 +1,6 @@
 package ru.skillfactory.Ex3.comparator;
 
-import ru.skillfactory.Ex3.comparator.model.Student;
+import ru.skillfactory.Ex3.model.Student;
 
 public class StudentCurrentCourseNumberComparator implements StudentComparator{
     @Override

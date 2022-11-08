@@ -1,7 +1,7 @@
 package ru.skillfactory.Ex3.comparator;
 
 import org.apache.commons.lang3.StringUtils;
-import ru.skillfactory.Ex3.comparator.model.Student;
+import ru.skillfactory.Ex3.model.Student;
 
 public class StudentFullNameComparator implements StudentComparator{
     @Override
