@@ -18,8 +18,6 @@ public class Main {
     }
 }
 
-
-
       /*  StudyProfile studyProfileMath = StudyProfile.MATHEMATICS;
         StudyProfile studyProfileMathVal = StudyProfile.valueOf("NUCLEAR");
 
