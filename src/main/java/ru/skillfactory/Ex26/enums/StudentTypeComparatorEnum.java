@@ -9,7 +9,7 @@ public enum StudentTypeComparatorEnum {
     private int studentTypeComparatorEnumValue;
 
     StudentTypeComparatorEnum(int studentTypeValue) {
-        this.studentTypeComparatorEnumValue =studentTypeValue;
+         this.studentTypeComparatorEnumValue =studentTypeValue;
     }
 
     public int getStudentTypeComparatorEnumValue() {
