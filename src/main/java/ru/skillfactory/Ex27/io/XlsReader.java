@@ -3,7 +3,7 @@ package ru.skillfactory.Ex27.io;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import ru.skillfactory.Ex26.enums.StudyProfile;
+import ru.skillfactory.Ex27.enums.StudyProfile;
 import ru.skillfactory.Ex27.model.Student;
 import ru.skillfactory.Ex27.model.University;
 

@@ -1,6 +1,6 @@
 package ru.skillfactory.Ex27.comparator;
 
-import ru.skillfactory.Ex26.model.University;
+import ru.skillfactory.Ex27.model.University;
 
 public class UniversityYearOfFoundationComparator implements UniversityComparator {
     @Override

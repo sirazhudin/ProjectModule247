@@ -1,6 +1,6 @@
 package ru.skillfactory.Ex27.model;
 
-import ru.skillfactory.Ex26.enums.StudyProfile;
+import ru.skillfactory.Ex27.enums.StudyProfile;
 
 public class University {
     String id;

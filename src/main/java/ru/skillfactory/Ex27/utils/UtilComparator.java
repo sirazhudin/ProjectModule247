@@ -1,8 +1,8 @@
 package ru.skillfactory.Ex27.utils;
 
-import ru.skillfactory.Ex26.comparator.*;
-import ru.skillfactory.Ex26.enums.StudentTypeComparatorEnum;
-import ru.skillfactory.Ex26.enums.UniversityTypeComparatorEnum;
+import ru.skillfactory.Ex27.comparator.*;
+import ru.skillfactory.Ex27.enums.StudentTypeComparatorEnum;
+import ru.skillfactory.Ex27.enums.UniversityTypeComparatorEnum;
 
 public class UtilComparator {
     private  UtilComparator () {}

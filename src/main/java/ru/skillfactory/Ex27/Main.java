@@ -1,8 +1,8 @@
 package ru.skillfactory.Ex27;
-import ru.skillfactory.Ex26.comparator.StudentComparator;
-import ru.skillfactory.Ex26.comparator.UniversityComparator;
-import ru.skillfactory.Ex26.enums.StudentTypeComparatorEnum;
-import ru.skillfactory.Ex26.enums.UniversityTypeComparatorEnum;
+import ru.skillfactory.Ex27.comparator.StudentComparator;
+import ru.skillfactory.Ex27.comparator.UniversityComparator;
+import ru.skillfactory.Ex27.enums.StudentTypeComparatorEnum;
+import ru.skillfactory.Ex27.enums.UniversityTypeComparatorEnum;
 import ru.skillfactory.Ex27.io.XlsReader;
 import ru.skillfactory.Ex27.model.Student;
 import ru.skillfactory.Ex27.model.University;
