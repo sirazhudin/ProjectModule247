@@ -1,4 +1,4 @@
-package ru.skillfactory.Ex26.enums;
+package ru.skillfactory.Ex27.enums;
 
 public enum StudyProfile {
 
