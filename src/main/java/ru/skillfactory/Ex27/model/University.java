@@ -10,6 +10,7 @@ public class University {
     StudyProfile mainProfile;
     //russian
     String mainProfileRus = "";
+
     public University(){}
 
     public University(String id, String fullName, String shortName, int yearOfFoundation, StudyProfile mainProfile){

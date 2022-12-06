@@ -29,30 +29,3 @@ public class Main {
     }
 }
 
-      /*
-
-//        List<University> toSort = new ArrayList<>();
-//        for(University university1 : universities) {
-//            toSort.add(university1);
-//        }
-//        toSort.sort(universityComparator);
-//        for(University university1 : toSort) {
-//            System.out.println(university1);
-//        }
-
-       for(Student student : students) {
-            System.out.println(student);
-        }
-
-      StudyProfile studyProfileMath = StudyProfile.MATHEMATICS;
-        StudyProfile studyProfileMathVal = StudyProfile.valueOf("NUCLEAR");
-        System.out.println(studyProfileMath + " Mathematics -- ");
-        System.out.println(studyProfileMathVal.getStudyProfileValue() + " value of Mathematics");
-        System.out.println("___________________________________________\n");
-        System.out.println(StudyProfile.NUCLEAR.getStudyProfileRus()+" Nuclear");
-        System.out.println(StudyProfile.CHEMISTRY.getStudyProfileRus()+" Chemistry ");
-        System.out.println(StudyProfile.ENGINEERING.getStudyProfileRus()+" Engineering");
-        System.out.println(StudyProfile.PROGRAMMING.getStudyProfileRus()+" Programming");
-
-    }
-}*/

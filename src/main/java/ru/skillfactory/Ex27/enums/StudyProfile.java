@@ -13,11 +13,13 @@ public enum StudyProfile {
     PHYSICS(5){ @Override public String getStudyProfileRus() { return "Общая Физика"; }},
     MATHEMATICS(6){@Override public String getStudyProfileRus() { return "Математический Факультет";}},
     PROGRAMMING(7){@Override public String getStudyProfileRus() {
-        return "Програмирование";
-    }},
-    LINGUISTICS(8){@Override  public String getStudyProfileRus() { return "Лингвистический"; }};
+        return "Програмирование";}},
+    LINGUISTICS(8){@Override  public String getStudyProfileRus() { return "Лингвистический"; }},
+    JURISPRUDENCE(9){@Override public String getStudyProfileRus(){
+        return "Юриспруденция"; }},
+    COMPUTER_SCIENCE(10){@Override public String getStudyProfileRus(){ return "Информатика";}};
 
-    private int studyProfileValue;
+    private final int studyProfileValue;
     //constructor
     private StudyProfile(int studyProfileValue) {
         this.studyProfileValue=studyProfileValue;

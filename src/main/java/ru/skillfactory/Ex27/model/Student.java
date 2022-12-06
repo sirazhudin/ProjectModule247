@@ -6,6 +6,7 @@ public class Student {
     String  universityId;
     int currentCourseNumber;
     float avgExamScore;
+
     public Student(){}
 
     public Student (String fullName, String universityId, int currentCourseNumber, float avgExamScore){
