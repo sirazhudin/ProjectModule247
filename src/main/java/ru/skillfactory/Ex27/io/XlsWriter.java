@@ -6,6 +6,7 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import ru.skillfactory.Ex27.model.Statistics;
 
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.List;
 
@@ -15,29 +16,38 @@ public class XlsWriter {
         XSSFWorkbook statisticsXxssfWorkbook = new XSSFWorkbook();
         XSSFSheet statisticsXssfSheet = statisticsXxssfWorkbook.createSheet("Statistics");
 
-        int rowNum = 1;
-        Row headerRow = statisticsXssfSheet.createRow(rowNum);
-        Cell profileHeaderCell = headerRow.createCell(1);
+        int rowNum = 0;
+        Row headerRow = statisticsXssfSheet.createRow(rowNum++);
+        Cell profileHeaderCell = headerRow.createCell(0);
         profileHeaderCell.setCellValue("Study Profile");
-        Cell averageSocoreHeaderCell = headerRow.createCell(2);
-        averageSocoreHeaderCell.setCellValue("Average Score/Mark");
-        Cell numberOfStudentsHeaderCell = headerRow.createCell(3);
+
+        Cell averageSocoreHeaderCell = headerRow.createCell(1);
+        averageSocoreHeaderCell.setCellValue("Average ScoreMark");
+
+        Cell numberOfStudentsHeaderCell = headerRow.createCell(2);
         numberOfStudentsHeaderCell.setCellValue("Number of Students");
-        Cell numberOfUniverisitiesHeaderCell = headerRow.createCell(4);
+
+        Cell numberOfUniverisitiesHeaderCell = headerRow.createCell(3);
         numberOfUniverisitiesHeaderCell.setCellValue("Number of Universities");
+
+        Cell universityHeaderCell = headerRow.createCell(4);
+        universityHeaderCell.setCellValue("University");
+
         for (Statistics statistics:statisticsList) {
-            rowNum++;
-            Row rowData = statisticsXssfSheet.createRow(rowNum);
-            Cell studyProfileCell = rowData.createCell(1);
+             Row rowData = statisticsXssfSheet.createRow(rowNum++);
+            Cell studyProfileCell = rowData.createCell(0);
             studyProfileCell.setCellValue(statistics.getStudyProfile().getStudyProfileRus());
-            Cell avgScoreCell = rowData.createCell(2);
+            Cell avgScoreCell = rowData.createCell(1);
             avgScoreCell.setCellValue(statistics.getAvgExamScore());
-            Cell numberOfStudentsCell = rowData.createCell(3);
+            Cell numberOfStudentsCell = rowData.createCell(2);
             numberOfStudentsCell.setCellValue(statistics.getNumberOfStudents());
-            Cell numberOfUniversitiesCell = rowData.createCell(4);
+            Cell numberOfUniversitiesCell = rowData.createCell(3);
             numberOfUniversitiesCell.setCellValue(statistics.getNameOfUniversity());
-            Cell universityNameCell = rowData.createCell(5);
+            Cell universityNameCell = rowData.createCell(4);
             universityNameCell.setCellValue(statistics.getNameOfUniversity());
+        }
+        try (FileOutputStream fileOutputStream = new FileOutputStream(pathToWrt)) {
+            statisticsXxssfWorkbook.write(fileOutputStream);
         }
     }
 }
