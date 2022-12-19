@@ -12,13 +12,20 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.OptionalDouble;
 import java.util.Set;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 public class UtilStatistics {
+    private static final Logger logger = Logger.getLogger(UtilStatistics.class.getSimpleName());
+
     private UtilStatistics(){}
 
     public static List<Statistics> createStatistics(List<Student> studentList, List<University> universityList) {
+        logger.log(Level.INFO,"Statistics Module started");
+
         List<Statistics> statisticsList = new ArrayList<>();
+
         Set<StudyProfile> studyProfiles = universityList.stream().map(University::getMainProfile).collect(Collectors.toSet());
         //--
         studyProfiles.forEach(studyProfile -> {
@@ -40,6 +47,7 @@ public class UtilStatistics {
             statistics.setAvgExamScore(0);
             avgExamScore.ifPresent(val -> statistics.setAvgExamScore((float) BigDecimal.valueOf(val).setScale(2, RoundingMode.HALF_UP).doubleValue()));
         });
+        logger.log(Level.INFO,"Statistics Module Stopped!");
         return statisticsList;
     }
 }

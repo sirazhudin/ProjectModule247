@@ -18,7 +18,7 @@ public class XlsWriter {
     private XlsWriter(){}
     public static void wrtStatisticsXls(List<Statistics> statisticsList, String pathToWrt) throws IOException {
 
-        logger.log(Level.INFO,"Writing to " + pathToWrt + " file - started!");
+        logger.log(Level.INFO,"Writing to the " + pathToWrt + " file - started!");
         XSSFWorkbook statisticsXxssfWorkbook = new XSSFWorkbook();
         XSSFSheet statisticsXssfSheet = statisticsXxssfWorkbook.createSheet("Statistics");
 //setting up fonts
@@ -71,6 +71,6 @@ public class XlsWriter {
         } catch(IOException e) {
             logger.log(Level.SEVERE, "Writing to   " + pathToWrt + " file failed ",e);
             return;
-        }logger.log(Level.INFO,"Write to " + pathToWrt + " was successful");
+        }logger.log(Level.INFO,"Write to the " + pathToWrt + " file was successful");
     }
 }
