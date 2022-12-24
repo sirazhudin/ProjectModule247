@@ -1,7 +1,7 @@
-package ru.skillfactory.Ex28.model;
+package ru.skillfactory.Ex29.model;
 
-import ru.skillfactory.Ex28.enums.StudyProfile;
 import com.google.gson.annotations.SerializedName;
+import ru.skillfactory.Ex29.enums.StudyProfile;
 
 public class University {
     @SerializedName(value = "universityId", alternate = "id")
