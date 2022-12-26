@@ -1,16 +1,27 @@
 package ru.skillfactory.Ex29.model;
 
 import com.google.gson.annotations.SerializedName;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlTransient;
 import ru.skillfactory.Ex29.enums.StudyProfile;
-
+@XmlAccessorType(XmlAccessType.FIELD)
 public class University {
     @SerializedName(value = "universityId", alternate = "id")
+    @XmlElement(name = "UniversityID")
     String id;
-    @SerializedName(value = "universityName", alternate = "fullName")
+    @SerializedName(value = "universityName", alternate = "fullName")@XmlElement(name="UniversityName")
     String fullName;
-
+    @SerializedName(value = "universityShortName",alternate = "shortName")
+    @XmlTransient
     String shortName;
+
+    @SerializedName(value = "founded",alternate = "yearOfFounddation")
+    @XmlElement(name = "Founded")
     int yearOfFoundation;
+    @SerializedName(value = "profile",alternate = "mainProfile")
+    @XmlElement(name = "Profile ")
     StudyProfile mainProfile;
     //russian
     String mainProfileRus = "";

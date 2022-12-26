@@ -35,22 +35,23 @@ private static final Logger logger = Logger.getLogger(JsonWriter.class.getName()
         statisticsToJson(completeInfo);
     }
     static void studentsToJson(CompleteInfo completeInfo){
-        String studentsJson = UtilJson.studentListToJson(completeInfo.getStudentList());
-        try{
-            FileOutputStream outputStream = new FileOutputStream("jsonReqs/students"+completeInfo.getTimeStamp().getTime()+".json");
-            outputStream.write(studentsJson.getBytes(StandardCharsets.UTF_8));
-        }catch(IOException e) {
-            e.printStackTrace();
-        }
+        String studentsJson = UtilJson.classListToJson(completeInfo.getStudentList());
+        writeToFile("students",studentsJson);
+//        try{
+//            FileOutputStream outputStream = new FileOutputStream("jsonReqs/students"+completeInfo.getTimeStamp().getTime()+".json");
+//            outputStream.write(studentsJson.getBytes(StandardCharsets.UTF_8));
+//        }catch(IOException e) {
+//            e.printStackTrace();
+//        }
     }
     static void universitiesToJson(CompleteInfo completeInfo) {
-        String universitiesJson = UtilJson.universityListToJson(completeInfo.getUniversityList());
+        String universitiesJson = UtilJson.classListToJson(completeInfo.getUniversityList());
         writeToFile("universities",universitiesJson);
 
     }
 
     static void statisticsToJson(CompleteInfo completeInfo) {
-        String statisticsJson = UtilJson.statisticsListToJson(completeInfo.getStatisticsList());
+        String statisticsJson = UtilJson.classListToJson(completeInfo.getStatisticsList());
         writeToFile("statistics",statisticsJson);
     }
 
