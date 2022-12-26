@@ -3,6 +3,7 @@ import ru.skillfactory.Ex29.comparator.StudentComparator;
 import ru.skillfactory.Ex29.comparator.UniversityComparator;
 import ru.skillfactory.Ex29.enums.StudentTypeComparatorEnum;
 import ru.skillfactory.Ex29.enums.UniversityTypeComparatorEnum;
+import ru.skillfactory.Ex29.io.JsonWriter;
 import ru.skillfactory.Ex29.io.XlsReader;
 import ru.skillfactory.Ex29.io.XlsWriter;
 import ru.skillfactory.Ex29.io.XmlWriter;
@@ -59,6 +60,7 @@ public class Main {
         completeInfo.setTimeStamp(new Date());
 
         XmlWriter.completeInfoToXml(completeInfo);
+        JsonWriter.javaToJson(completeInfo);
 
         logger.log(Level.INFO, "Main module finished!");
     }

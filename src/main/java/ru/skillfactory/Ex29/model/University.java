@@ -8,6 +8,7 @@ public class University {
     String id;
     @SerializedName(value = "universityName", alternate = "fullName")
     String fullName;
+
     String shortName;
     int yearOfFoundation;
     StudyProfile mainProfile;

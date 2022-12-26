@@ -3,6 +3,7 @@ package ru.skillfactory.Ex29.utils;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
+import ru.skillfactory.Ex29.model.Statistics;
 import ru.skillfactory.Ex29.model.Student;
 import ru.skillfactory.Ex29.model.University;
 
@@ -41,5 +42,8 @@ public class UtilJson {
 
     public static List<Student> jsonToStudentList(String json) {
         return new Gson().fromJson(json, new TypeToken<List<Student>>() {}.getType());
+    }
+    public static String statisticsListToJson(List<Statistics> statisticsList){
+        return new GsonBuilder().setPrettyPrinting().create().toJson(statisticsList);
     }
 }

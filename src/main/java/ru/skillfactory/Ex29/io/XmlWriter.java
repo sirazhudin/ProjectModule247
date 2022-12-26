@@ -24,6 +24,9 @@ public class XmlWriter {
             JAXBContext jaxbContext = JAXBContext.newInstance(CompleteInfo.class);
 
             Marshaller marshaller = jaxbContext.createMarshaller();
+
+            //add formatting
+            marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
         String path = "xmlReqs";
         try {
             path = String.valueOf(Files.createDirectory(Paths.get("xmlReqs")));
