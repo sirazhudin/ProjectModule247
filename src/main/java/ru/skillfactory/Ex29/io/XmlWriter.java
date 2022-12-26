@@ -24,16 +24,18 @@ public class XmlWriter {
             JAXBContext jaxbContext = JAXBContext.newInstance(CompleteInfo.class);
 
             Marshaller marshaller = jaxbContext.createMarshaller();
-        String path = "";
+        String path = "xmlReqs";
         try {
             path = String.valueOf(Files.createDirectory(Paths.get("xmlReqs")));
             logger.log(Level.INFO,"creating directory");
             }catch(IOException e) {
-            logger.log(Level.SEVERE,"Cannot create folder");
+            logger.log(Level.SEVERE,"Cannot create folder : " +path +", most likely it exists", e);
             e.printStackTrace();
         }
            File file = new File(path+"/infoReq"+new Date().getTime()+".xml");
-            marshaller.marshal(completeInfo, file);
+          try {
+              marshaller.marshal(completeInfo, file);
+          }catch(Exception e) {e.printStackTrace();}
         }catch(JAXBException e) {
             logger.log(Level.SEVERE,"JAXB to XML failed");
             e.printStackTrace();

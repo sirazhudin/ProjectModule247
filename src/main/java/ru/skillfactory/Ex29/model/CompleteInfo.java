@@ -22,7 +22,9 @@ public class CompleteInfo {
 
     @XmlElement(name = "processedAt")
     private Date timeStamp;//bottom
-    public CompleteInfo(){}
+
+    public CompleteInfo(){}//constr
+
     public List<Student> getStudentList() {
         return studentList;
     }
@@ -39,6 +41,10 @@ public class CompleteInfo {
         this.universityList = universityList;
     }
 
+    public List<Statistics> getStatisticsList() {
+        return statisticsList;
+    }
+
     public void setStatisticsList(List<Statistics> statisticsList) {
         this.statisticsList = statisticsList;
     }
@@ -47,13 +53,12 @@ public class CompleteInfo {
         return timeStamp;
     }
 
-    public void setTimeStamp(Date timeStamp) {
+    public CompleteInfo setTimeStamp(Date timeStamp) {
         this.timeStamp = timeStamp;
+        return this;
     }
 
-    public List<Statistics> getStatisticsList() {
-        return statisticsList;
-    }
+
 
 //    public CompleteInfo setStatisticsList(List<Statistics> statisticsList) {
 //        this.statisticsList= this.statisticsList;
